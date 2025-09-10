@@ -1,0 +1,17 @@
+[
+  {"id": 1, "name": "Mobile Phones",      "description": "Smartphones and mobile devices"},
+  {"id": 2, "name": "Laptops",           "description": "Portable computers and notebooks"},
+  {"id": 3, "name": "Tablets",           "description": "Tablet computers and iPads"},
+  {"id": 4, "name": "Headphones & Audio","description": "Headsets, earphones, and speakers"},
+  {"id": 5, "name": "Televisions",       "description": "LED/4K TVs and home entertainment"},
+  {"id": 6, "name": "Home Appliances",   "description": "Refrigerators, washers, and ovens"},
+  {"id": 7, "name": "Office Furniture",  "description": "Chairs, desks, and office supplies"},
+  {"id": 8, "name": "Beauty & Fragrance","description": "Perfumes, cosmetics, and skincare"},
+  {"id": 9, "name": "Gaming & Consoles", "description": "Gaming consoles and accessories"},
+  {"id": 10,"name": "Cameras",           "description": "Digital cameras and photography gear"},
+  {"id": 11,"name": "Printers",          "description": "Printers and printing accessories"},
+  {"id": 12,"name": "Fashion & Footwear","description": "Clothing, shoes, and accessories"},
+  {"id": 13,"name": "Power Banks",       "description": "Portable chargers and power banks"},
+  {"id": 14,"name": "Soundbars",         "description": "Soundbar speakers and audio systems"},
+  {"id": 15,"name": "Dishwashers",       "description": "Kitchen dishwashers and accessories"}
+]

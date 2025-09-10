@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Samsung Galaxy M34 5G (Silver, 8GB/128GB)",
+    "description": "Samsung Galaxy M34 with 6.5\" FHD+ AMOLED 120Hz display, 50MP+8MP+2MP camera, 6000mAh battery (Middle East version).",
+    "category_id": 1,
+    "price": 9999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Apple iPhone 15 (128GB, Blue, ME Version)",
+    "description": "iPhone 15 with 6.1\" OLED display, Dynamic Island, A16 chip, 48MP camera, 5G, FaceTime support.",
+    "category_id": 1,
+    "price": 45999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Apple MacBook Air 13\" (M1, 8GB/256GB)",
+    "description": "Apple MacBook Air with 13-inch Retina display, M1 chip (8‑core CPU, 7‑core GPU), 8GB RAM, 256GB SSD, Magic Keyboard.",
+    "category_id": 2,
+    "price": 36550.20,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Apple AirPods Pro 2 Wireless Earbuds",
+    "description": "Apple AirPods Pro (2nd generation) with H2 chip, Active Noise Cancellation, Spatial Audio, Lightning charging case.",
+    "category_id": 4,
+    "price": 10300.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Apple EarPods with Lightning Connector (White)",
+    "description": "Apple EarPods (wired earphones) with Lightning connector, includes built-in microphone and remote.",
+    "category_id": 4,
+    "price": 1200.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung 55\" 4K UHD Smart LED TV (55DU7000UXEG)",
+    "description": "Samsung 55\" 4K UHD Smart LED TV with built-in tuner, Crystal Processor 4K, HDR10+, AirSlim design.",
+    "category_id": 5,
+    "price": 19777.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "LG 43\" LED Smart TV (43LM6300PVB)",
+    "description": "LG 43-inch LED Smart TV with Active HDR, DTS Virtual:X sound, sleek design.",
+    "category_id": 5,
+    "price": 13369.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Hamburg FB15 Mini Bar Refrigerator 130L (Silver)",
+    "description": "Hamburg 130L Mini Refrigerator, compact silver design for home or office use.",
+    "category_id": 6,
+    "price": 7550.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "ALASKA Upright Freezer 5 Drawers 220L (UP270)",
+    "description": "ALASKA 220L upright freezer with 5 drawers, white finish, manual defrost, strong freezing.",
+    "category_id": 6,
+    "price": 12899.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Toshiba 338L No-Frost Refrigerator (GR-RT468WE-DMN49)",
+    "description": "Toshiba 338L No-Frost refrigerator, bottom mount freezer, anti-bacterial liner.",
+    "category_id": 6,
+    "price": 17799.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung 419L Top Mount Refrigerator (RT40DG3110QVMR)",
+    "description": "Samsung 419L Top Mount No Frost refrigerator, black stainless finish, smart inverter compressor.",
+    "category_id": 6,
+    "price": 26775.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Canon EOS 250D DSLR Camera with 18-55mm Lens",
+    "description": "Canon EOS 250D DSLR (24.1 MP) with 18-55mm IS STM lens, Full HD video, articulating touchscreen.",
+    "category_id": 10,
+    "price": 30966.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Toshiba 13kg Top Load Washing Machine (AW-DUK1300KUPEG)",
+    "description": "Toshiba 13 kg Top Load Washer, large drum, energy efficient, black-silver finish.",
+    "category_id": 6,
+    "price": 16429.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Jac 10kg Top Load Washing Machine (NGW-108)",
+    "description": "Jac 10kg Top Load Washing Machine, quick wash cycles, white exterior.",
+    "category_id": 6,
+    "price": 4799.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Fresh 4kg Top Load Washing Machine",
+    "description": "Fresh 4 kg compact washer, ideal for small spaces, multiple wash.",
+    "category_id": 6,
+    "price": 1899.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "SKECHERS Vapor Foam Lace-Up Shoes (Men's)",
+    "description": "Skechers men’s Vapor Foam athletic shoes with memory foam comfort, grey-blue color.",
+    "category_id": 12,
+    "price": 3894.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Nike Superfly 10 Club Football Boots (Soccer Cleats)",
+    "description": "Nike Superfly 10 Club firm-ground football boots in white/blue.",
+    "category_id": 12,
+    "price": 4670.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "JOYROOM 10000mAh Magnetic Wireless Power Bank",
+    "description": "JOYROOM JR-W020 10000mAh wireless magnetic power bank with 20W fast charge:contentReference[oaicite:12]{index=12}.",
+    "category_id": 13,
+    "price": 896.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Anker Zolo 20000mAh PD 30W Power Bank",
+    "description": "Anker Zolo 20000mAh portable charger with PD 30W, built-in USB-C and Lightning cables:contentReference[oaicite:13]{index=13}.",
+    "category_id": 13,
+    "price": 2150.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "UGREEN 10000mAh 30W Portable Power Bank (Grey)",
+    "description": "UGREEN 10000mAh power bank (30W USB-C fast charge) for iPhone/Samsung devices:contentReference[oaicite:14]{index=14}.",
+    "category_id": 13,
+    "price": 2188.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung Galaxy M55 5G (Light Green, 8GB/256GB)",
+    "description": "Samsung Galaxy M55 5G with 6.7\" Super AMOLED+ display, 50MP triple camera, 5000mAh battery:contentReference[oaicite:15]{index=15}.",
+    "category_id": 1,
+    "price": 16453.90,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Apple iPad 10th Gen 10.9\" (64GB, WiFi)",
+    "description": "Apple iPad (2022) with 10.9-inch Retina display, A14 chip, 64GB storage, Touch ID:contentReference[oaicite:16]{index=16}.",
+    "category_id": 3,
+    "price": 17998.95,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung Galaxy Watch7 44mm (UAE Edition, Green)",
+    "description": "Samsung Galaxy Watch7, 44mm, All-Day Battery, Green, Bluetooth, compatible with Android.",
+    "category_id": 13,
+    "price": 9700.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung Galaxy Watch FE 40mm (Silver, GPS)",
+    "description": "Samsung Galaxy Watch FE, 40mm Silver GPS, fitness tracker with notifications.",
+    "category_id": 13,
+    "price": 6834.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Sony PlayStation 5 Console (Disc Version)",
+    "description": "Sony PS5 gaming console with Ultra HD Blu-Ray drive, 825GB SSD, HDR support:contentReference[oaicite:17]{index=17}.",
+    "category_id": 9,
+    "price": 32999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Canon PIXMA G3430 Wireless MegaTank Printer (Pink)",
+    "description": "Canon PIXMA G3430 3-in-1 MegaTank printer with refillable ink tanks, wireless A4 printing:contentReference[oaicite:18]{index=18}.",
+    "category_id": 11,
+    "price": 6200.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Canon MAXIFY GX2040 4-in-1 MegaTank Printer",
+    "description": "Canon MAXIFY GX2040 A4 4-in-1 MegaTank printer, refillable inkjet with Ethernet/WiFi.",
+    "category_id": 11,
+    "price": 19899.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung 27\" QHD Gaming Monitor Odyssey G5 (S27CG552EM)",
+    "description": "Samsung 27-inch Odyssey G5 gaming monitor, QHD 2560×1440, 165Hz, FreeSync support.",
+    "category_id": 11,
+    "price": 9269.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "AOC 27\" QHD Gaming Monitor (Q27G4F, Black/Red)",
+    "description": "AOC Q27G4F 27-inch gaming monitor, 2560×1440 2K, IPS panel, 180Hz refresh:contentReference[oaicite:19]{index=19}.",
+    "category_id": 11,
+    "price": 12814.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "JBL Cinema SB550 3.1-Channel Soundbar with Subwoofer",
+    "description": "JBL Cinema SB550 3.1ch soundbar system with wireless subwoofer (Dolby Digital, Bluetooth):contentReference[oaicite:20]{index=20}.",
+    "category_id": 14,
+    "price": 16999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "Samsung HT-S20R 2.1ch Surround Sound Bar",
+    "description": "Samsung HT-S20R 2.1 channel home theater soundbar with wireless subwoofer:contentReference[oaicite:21]{index=21}.",
+    "category_id": 14,
+    "price": 15580.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "JBL Bar 1000 7.1.4 Channel Soundbar with Detachable Speakers",
+    "description": "JBL Bar 1000 soundbar (7.1.4 channel) with detachable wireless surround speakers, Dolby Atmos:contentReference[oaicite:22]{index=22}.",
+    "category_id": 14,
+    "price": 59999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "JBL 2.1 Deep Bass MK2 Soundbar with Subwoofer",
+    "description": "JBL 2.1 Deep Bass MK2 channel soundbar with wireless subwoofer, Bluetooth:contentReference[oaicite:23]{index=23}.",
+    "category_id": 14,
+    "price": 32999.00,
+    "image": "images/1.avif"
+  },
+  {
+    "name": "TCL 2.1-Channel Sound Bar (TS6110)",
+    "description": "TCL TS6110 2.1 channel sound bar for TV, wireless subwoofer, Bluetooth, black:contentReference[oaicite:24]{index=24}.",
+    "category_id": 14,
+    "price": 15299.00,
+    "image": "images/1.avif"
+  }
+]
