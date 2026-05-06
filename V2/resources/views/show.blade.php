@@ -15,9 +15,14 @@
             <p class="mt-2 text-gray-700">
                 {{ $product->description }}
             </p>
-            <h2 class="mt-2 text-green-700 text-lg font-semibold">
-                Price: {{ $product->price }} EGP
-            </h2>
+            <div class="flex justify-between">
+                <h2 class="mt-2 text-green-700 text-lg font-semibold">
+                    Price: {{ $product->price }} EGP
+                </h2>
+                <h2 class="mt-2 text-green-700 text-lg font-semibold">
+                    Quantity: {{ $product->quantity }}
+                </h2>
+            </div>
 
             <div class="flex flex-col sm:flex-row gap-3 mt-6">
                 <a href="/cart"

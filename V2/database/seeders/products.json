@@ -4,105 +4,121 @@
     "description": "Samsung Galaxy M34 with 6.5\" FHD+ AMOLED 120Hz display, 50MP+8MP+2MP camera, 6000mAh battery (Middle East version).",
     "category_id": 1,
     "price": 9999.00,
-    "image": "images/1.avif"
+    "image": "images/1.avif",
+    "quantity": 50
   },
   {
     "name": "Apple iPhone 15 (128GB, Blue, ME Version)",
     "description": "iPhone 15 with 6.1\" OLED display, Dynamic Island, A16 chip, 48MP camera, 5G, FaceTime support.",
     "category_id": 1,
     "price": 45999.00,
-    "image": "images/2.avif"
+    "image": "images/2.avif",
+    "quantity": 30
   },
   {
     "name": "Apple MacBook Air 13\" (M1, 8GB/256GB)",
     "description": "Apple MacBook Air with 13-inch Retina display, M1 chip (8‑core CPU, 7‑core GPU), 8GB RAM, 256GB SSD, Magic Keyboard.",
     "category_id": 2,
     "price": 36550.20,
-    "image": "images/3.jpg"
+    "image": "images/3.jpg",
+    "quantity": 20
   },
   {
     "name": "Apple AirPods Pro 2 Wireless Earbuds",
     "description": "Apple AirPods Pro (2nd generation) with H2 chip, Active Noise Cancellation, Spatial Audio, Lightning charging case.",
     "category_id": 4,
     "price": 10300.00,
-    "image": "images/4.jpg"
+    "image": "images/4.jpg",
+    "quantity": 100
   },
   {
     "name": "Apple EarPods with Lightning Connector (White)",
     "description": "Apple EarPods (wired earphones) with Lightning connector, includes built-in microphone and remote.",
     "category_id": 4,
     "price": 1200.00,
-    "image": "images/5.jpg"
+    "image": "images/5.jpg",
+    "quantity": 10
   },
     {
     "name": "Jac 10kg Top Load Washing Machine (NGW-108)",
     "description": "Jac 10kg Top Load Washing Machine, quick wash cycles, white exterior.",
     "category_id": 6,
     "price": 4799.00,
-    "image": "images/14.jpg"
+    "image": "images/14.jpg",
+    "quantity": 16
   },
   {
     "name": "Samsung 55\" 4K UHD Smart LED TV (55DU7000UXEG)",
     "description": "Samsung 55\" 4K UHD Smart LED TV with built-in tuner, Crystal Processor 4K, HDR10+, AirSlim design.",
     "category_id": 5,
     "price": 19777.00,
-    "image": "images/6.jpg"
+    "image": "images/6.jpg",
+    "quantity": 27
   },
   {
     "name": "LG 43\" LED Smart TV (43LM6300PVB)",
     "description": "LG 43-inch LED Smart TV with Active HDR, DTS Virtual:X sound, sleek design.",
     "category_id": 5,
     "price": 13369.00,
-    "image": "images/7.jpg"
+    "image": "images/7.jpg",
+    "quantity": 25
   },
   {
     "name": "Hamburg FB15 Mini Bar Refrigerator 130L (Silver)",
     "description": "Hamburg 130L Mini Refrigerator, compact silver design for home or office use.",
     "category_id": 6,
     "price": 7550.00,
-    "image": "images/8.jpg"
+    "image": "images/8.jpg",
+    "quantity": 30
   },
   {
     "name": "ALASKA Upright Freezer 5 Drawers 220L (UP270)",
     "description": "ALASKA 220L upright freezer with 5 drawers, white finish, manual defrost, strong freezing.",
     "category_id": 6,
     "price": 12899.00,
-    "image": "images/9.avif"
+    "image": "images/9.avif",
+    "quantity": 10
   },
     {
     "name": "Fresh 4kg Top Load Washing Machine",
     "description": "Fresh 4 kg compact washer, ideal for small spaces, multiple wash.",
     "category_id": 6,
     "price": 1899.00,
-    "image": "images/15.jpg"
+    "image": "images/15.jpg",
+    "quantity": 20
   },
   {
     "name": "Toshiba 338L No-Frost Refrigerator (GR-RT468WE-DMN49)",
     "description": "Toshiba 338L No-Frost refrigerator, bottom mount freezer, anti-bacterial liner.",
     "category_id": 6,
     "price": 17799.00,
-    "image": "images/10.jpg"
+    "image": "images/10.jpg",
+    "quantity": 15
   },
   {
     "name": "Samsung 419L Top Mount Refrigerator (RT40DG3110QVMR)",
     "description": "Samsung 419L Top Mount No Frost refrigerator, black stainless finish, smart inverter compressor.",
     "category_id": 6,
     "price": 26775.00,
-    "image": "images/11.webp"
+    "image": "images/11.webp",
+    "quantity": 5
   },
   {
     "name": "Canon EOS 250D DSLR Camera with 18-55mm Lens",
     "description": "Canon EOS 250D DSLR (24.1 MP) with 18-55mm IS STM lens, Full HD video, articulating touchscreen.",
     "category_id": 10,
     "price": 30966.00,
-    "image": "images/12.jpg"
+    "image": "images/12.jpg",
+    "quantity": 3
   },
   {
     "name": "Toshiba 13kg Top Load Washing Machine (AW-DUK1300KUPEG)",
     "description": "Toshiba 13 kg Top Load Washer, large drum, energy efficient, black-silver finish.",
     "category_id": 6,
     "price": 16429.00,
-    "image": "images/13.jpg"
+    "image": "images/13.jpg",
+    "quantity": 8
+
   }
 
 ]

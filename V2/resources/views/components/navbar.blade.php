@@ -11,8 +11,13 @@
                 <!-- Desktop Menu -->
                 <ul class="hidden lg:flex lg:gap-8 text-lg items-center">
                     <li><a href="/" class="nav-link">Home</a></li>
+                    @can('edit')
+                                            <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+
+                    @endcan
                     @auth
-                    <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                                            <li><a href="/dashboard" class="nav-link">Welcome, {{ auth()->user()->name }}</a></li>
+
                     @endauth
                     <li><a href="/cart" class="nav-link">Cart</a></li>
                     @guest
