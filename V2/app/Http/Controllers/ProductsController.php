@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
 class ProductsController extends Controller
@@ -15,7 +16,8 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::paginate(9);
-        return view('home', compact('products'));
+        $categories = Category::all();
+        return view('home', compact('products','categories'));
     }
 
     /**
@@ -23,7 +25,9 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        //
+       
+        $categories = Category::all();
+        return view('create', compact('categories'));
     }
 
     /**
@@ -31,7 +35,15 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'quantity' => 'required|integer|min:0',
+            'category_id' => 'required|exists:categories,id',
+        ]);
+        Product::create($validated);
+        return redirect()->route('products.index')->with('success', 'Product created successfully');
     }
 
     /**

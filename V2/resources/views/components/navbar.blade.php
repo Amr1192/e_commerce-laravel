@@ -13,10 +13,12 @@
                     <li><a href="/" class="nav-link">Home</a></li>
                     @can('edit')
                                             <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                                            <li><a href="/products/create" class="nav-link">Create</a></li>
+
 
                     @endcan
                     @auth
-                                            <li><a href="/dashboard" class="nav-link">Welcome, {{ auth()->user()->name }}</a></li>
+                                            <li><a href="/" class="nav-link">Welcome, {{ auth()->user()->name }}</a></li>
 
                     @endauth
                     <li><a href="/cart" class="nav-link">Cart</a></li>

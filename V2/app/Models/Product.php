@@ -16,6 +16,7 @@ protected $fillable = [
     'description',
     'category_id',
     'price',
+    'quantity',
 ];
 
 public function category() {

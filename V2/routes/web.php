@@ -28,11 +28,11 @@ Route::middleware('auth')->group(function () {
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
     Route::get('/signup', [AuthController::class, 'showSignup'])->name('showSignup');
+    Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 });
 
 
-Route::post('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 
 Route::get('/cart', function () {
     return view('cart');

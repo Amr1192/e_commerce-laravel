@@ -5,11 +5,7 @@
     </div>
 @endif
 
-<header>
-    <h2 class="text-2xl text-center mt-4">Welcome to my website</h2>
-</header>
-
-<div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 justify-items-center max-w-7xl mx-auto">
+<div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 justify-items-center max-w-7xl mx-auto">
     @foreach ($products as $product)
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow p-5 flex flex-col h-full">
             <!-- Fixed height image container -->
