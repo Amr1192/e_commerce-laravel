@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartsController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\CartsController;
 
 Route::get('/', [ProductsController::class, 'index'])->name('products.index');
 Route::get('/products/create', [ProductsController::class, 'create'])->name('products.create');
@@ -18,12 +18,15 @@ Route::middleware('auth')->group(function () {
 
     Route::patch('/products/{id}', [ProductsController::class, 'patch'])->name('products.patch')->middleware('can:edit');
     Route::put('/products/{id}', [ProductsController::class, 'put'])->name('products.put')->middleware('can:edit');
-    Route::post( '/products/create', [ProductsController::class, 'store'])->name('products.store')->middleware('can:edit');
+    Route::post('/products/create', [ProductsController::class, 'store'])->name('products.store')->middleware('can:edit');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+    Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+    Route::get('/orders', [CheckoutController::class, 'ordersList'])->name('orders.index');
+    Route::get('/orders/{order}', [CheckoutController::class, 'show'])->name('orders.show');
+
 });
-
-
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLogin'])->name('showLogin');
@@ -32,8 +35,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 });
 
-
-
-Route::get('/cart', function () {
-    return view('cart');
-});
+Route::get('/cart', [CartsController::class, 'index'])->name('cart.index');
+Route::post('/cart/items', [CartsController::class, 'store'])->name('cart.items.store');
+Route::patch('/cart/items/{product}', [CartsController::class, 'update'])->name('cart.items.update');
+Route::delete('/cart/items/{product}', [CartsController::class, 'destroy'])->name('cart.items.destroy');

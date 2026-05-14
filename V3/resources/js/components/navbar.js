@@ -1,12 +1,17 @@
- const menu = document.getElementById('menu');
-        const hamburger = document.getElementById('hamburger');
-        
-        hamburger.addEventListener('click', () => {
-            if (menu.style.height === '0px' || !menu.style.height) {
-                menu.style.height = menu.scrollHeight + 'px';
-                hamburger.style.transform = 'rotate(90deg)';
-            } else {
-                menu.style.height = '0px';
-                hamburger.style.transform = 'rotate(0deg)';
-            }
-        });
+const menu = document.getElementById('menu');
+const hamburger = document.getElementById('hamburger');
+
+if (hamburger && menu) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = Boolean(menu.style.maxHeight && menu.style.maxHeight !== '0px');
+        if (isOpen) {
+            menu.style.maxHeight = '0px';
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.style.transform = 'rotate(0deg)';
+        } else {
+            menu.style.maxHeight = `${menu.scrollHeight}px`;
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburger.style.transform = 'rotate(90deg)';
+        }
+    });
+}

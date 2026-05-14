@@ -1,65 +1,77 @@
 @extends('layout')
-@section('title','signup')
-@section('html','h-full bg-white')
-@section('body','h-full')
+
+@section('title', 'Create account')
+
+@section('html', 'h-full scroll-smooth')
+
+@section('body', 'min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-white to-emerald-50')
+
 @section('content')
+    <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6">
+        <div class="mx-auto w-full max-w-md">
+            <div class="rounded-2xl border border-gray-200/80 bg-white/90 p-8 shadow-xl shadow-gray-900/5 ring-1 ring-gray-900/5 backdrop-blur-sm sm:p-10">
+                <div class="text-center">
+                    <a href="{{ route('products.index') }}" class="text-sm font-semibold text-emerald-700 hover:text-emerald-900">←
+                        Back to shop</a>
+                    <h1 class="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Create account</h1>
+                    <p class="mt-2 text-sm text-gray-600">Join to save your cart and track orders.</p>
+                </div>
 
-<div class="px-6 py-6 lg:px-8">
-  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Create a new account</h2>
-  </div>
+                <form action="{{ route('signup') }}" method="POST" class="mt-8 space-y-5">
+                    @csrf
 
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="/signup" method="POST" class="space-y-6">
-        @csrf
-      <div>
-        <label for="username" class="label">username</label>
-        <div class="mt-2">
-          <input id="username" type="text" name="name" required autocomplete="username" value="{{ old('name') }}" class="input" />
+                    <div>
+                        <label for="name" class="label">Full name</label>
+                        <div class="mt-2">
+                            <input id="name" type="text" name="name" required autocomplete="name" value="{{ old('name') }}"
+                                class="input" />
+                        </div>
+                        @error('name')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="email" class="label">Email</label>
+                        <div class="mt-2">
+                            <input id="email" type="email" name="email" required autocomplete="email" value="{{ old('email') }}"
+                                class="input" />
+                        </div>
+                        @error('email')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="password" class="label">Password</label>
+                        <div class="mt-2">
+                            <input id="password" type="password" name="password" required autocomplete="new-password"
+                                class="input" />
+                        </div>
+                        @error('password')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div>
+                        <label for="password_confirmation" class="label">Confirm password</label>
+                        <div class="mt-2">
+                            <input id="password_confirmation" type="password" name="password_confirmation" required
+                                autocomplete="new-password" class="input" />
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="flex w-full min-h-[48px] items-center justify-center rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
+                        Create account
+                    </button>
+                </form>
+
+                <p class="mt-8 text-center text-sm text-gray-600">
+                    Already have an account?
+                    <a href="{{ route('showLogin') }}" class="font-semibold text-emerald-700 hover:text-emerald-900">Sign in</a>
+                </p>
+            </div>
         </div>
-                @error('name')
-    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-@enderror
-        <label for="email" class="label">Email address</label>
-        <div class="mt-2">
-          <input id="email" type="email" name="email" required autocomplete="email" value="{{ old(key: 'email') }}" class="input" />
-        </div>
-        @error('email')
-    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-@enderror
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between">
-          <label for="password" class="label">Password</label>
-        </div>
-        <div class="mt-2">
-          <input id="password" type="password" name="password" required class="input" />
-        </div>
-                @error('password')
-    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-@enderror
-        <label for="confirm" class="label">Confirm password</label>
-          <div class="mt-2">
-          <input id="confirm" type="password" name="password_confirmation" required class="input" />
-        </div>
-
-      </div>
-
-      <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create an account</button>
-      </div>
-    </form>
-     <div class="text-sm mt-5 flex justify-between">
-       <p class=" text-center text-sm/6 text-gray-500">
-         Already a member?
-         <a href="/login" class="font-semibold text-indigo-600 hover:text-indigo-500">Log in</a>
-       </p>
-          
-
     </div>
-  </div>
-</div>
-
 @endsection
-

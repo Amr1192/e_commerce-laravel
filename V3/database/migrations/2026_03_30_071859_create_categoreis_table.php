@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
@@ -24,25 +25,20 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('categoreis');
-    
+        Schema::dropIfExists('categories');
     }
 };
 
-
 // make migration creates file that has the structure of the table
 
-//php artisan migrate       excutes the up funciton
+// php artisan migrate       excutes the up funciton
 
 // php artisan migrate     excutes the up funciton
 
-//php artisan migration:rollback        rollback final migration
+// php artisan migration:rollback        rollback final migration
 
+// migrate:fresh   drops all table   then run the migrations
 
-//migrate:fresh   drops all table   then run the migrations
+// migrate:refresh   run all down functions  then run the migrations
 
-
-//migrate:refresh   run all down functions  then run the migrations
-
-
-//migrate:reset     runs all down function.
+// migrate:reset     runs all down function.

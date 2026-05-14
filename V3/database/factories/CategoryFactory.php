@@ -2,23 +2,19 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
+ * @extends Factory<Category>
  */
 class CategoryFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
-            return [
-        'name' => fake()->name(),
-        'description' => fake()->text(),
-    ];
+        return [
+            'name' => fake()->unique()->words(2, true),
+            'description' => fake()->optional(0.8)->paragraph(),
+        ];
     }
 }

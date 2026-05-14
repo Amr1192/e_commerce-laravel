@@ -14,12 +14,17 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-            $table->integer('quantity');
-            $table->decimal('price',8,2);
+            $table->string('slug')->unique();
+            $table->string('sku')->unique();
+            $table->string('status')->default('active');
+            $table->text('description')->nullable();
+            $table->unsignedInteger('quantity')->default(0);
+            $table->decimal('price', 12, 2);
+            $table->decimal('compare_at_price', 12, 2)->nullable();
             $table->string('image')->nullable();
-            $table->foreignId('category_id')->constrained()->cascadeOnDelete();  
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

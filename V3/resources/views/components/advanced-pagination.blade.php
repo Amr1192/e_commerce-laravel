@@ -34,7 +34,7 @@
             @if($showPageSize)
             <div class="flex items-center space-x-2">
                 <label for="page-size" class="text-sm text-gray-700">Show:</label>
-                <select id="page-size" class="rounded-md border-gray-300 text-sm focus:border-blue-500 focus:ring-blue-500">
+                <select id="page-size" class="rounded-md border-gray-300 text-sm focus:border-emerald-500 focus:ring-emerald-500">
                     <option value="10" {{ $paginator->perPage() == 10 ? 'selected' : '' }}>10</option>
                     <option value="20" {{ $paginator->perPage() == 20 ? 'selected' : '' }}>20</option>
                     <option value="50" {{ $paginator->perPage() == 50 ? 'selected' : '' }}>50</option>
@@ -88,7 +88,7 @@
 
                 @for($i = $start; $i <= $end; $i++)
                     @if($i == $currentPage)
-                        <span class="relative z-10 inline-flex items-center px-4 py-2 border border-blue-500 bg-blue-50 text-sm font-medium text-blue-600 rounded-md">
+                        <span class="relative z-10 inline-flex items-center px-4 py-2 border border-emerald-500 bg-emerald-50 text-sm font-medium text-emerald-800 rounded-md">
                             {{ $i }}
                         </span>
                     @else
@@ -155,7 +155,7 @@
             <div class="flex items-center space-x-1">
                 @for($i = max(1, $currentPage - 1); $i <= min($lastPage, $currentPage + 1); $i++)
                     @if($i == $currentPage)
-                        <span class="relative z-10 inline-flex items-center px-3 py-2 border border-blue-500 bg-blue-50 text-sm font-medium text-blue-600 rounded-md">
+                        <span class="relative z-10 inline-flex items-center px-3 py-2 border border-emerald-500 bg-emerald-50 text-sm font-medium text-emerald-800 rounded-md">
                             {{ $i }}
                         </span>
                     @else

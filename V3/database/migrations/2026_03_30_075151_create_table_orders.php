@@ -14,6 +14,15 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('order_number')->unique();
+            $table->string('status')->default('pending');
+            $table->string('currency', 3)->default('EGP');
+            $table->decimal('subtotal', 14, 2)->default(0);
+            $table->decimal('tax_total', 14, 2)->default(0);
+            $table->decimal('shipping_total', 14, 2)->default(0);
+            $table->decimal('discount_total', 14, 2)->default(0);
+            $table->decimal('grand_total', 14, 2)->default(0);
+            $table->text('notes')->nullable();
             $table->timestamps();
         });
     }

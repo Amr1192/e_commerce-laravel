@@ -3,28 +3,28 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
+ * @extends Factory<Product>
  */
 class ProductFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
-        
+        $price = fake()->randomFloat(2, 10, 15000);
+
         return [
-        'name' => fake()->name(),
-        'description' => fake()->text(),
-        'category_id'=> Category::factory(),
-        'price' => fake()->numberBetween(1,10000),
-        'quantity' => fake()->numberBetween(1,100),
+            'name' => fake()->words(4, true),
+            'description' => fake()->paragraphs(2, true),
+            'category_id' => Category::factory(),
+            'price' => $price,
+            'compare_at_price' => fake()->boolean(25)
+                ? fake()->randomFloat(2, round((float) $price * 1.05, 2), round((float) $price * 1.45, 2))
+                : null,
+            'quantity' => fake()->numberBetween(0, 500),
+            'status' => fake()->randomElement(['active', 'draft', 'archived']),
         ];
-        
     }
 }

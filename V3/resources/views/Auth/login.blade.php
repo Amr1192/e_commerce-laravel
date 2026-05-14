@@ -1,53 +1,60 @@
 @extends('layout')
-@section('title','login')
-@section('html','h-full bg-white')
-@section('body','h-full')
+
+@section('title', 'Sign in')
+
+@section('html', 'h-full scroll-smooth')
+
+@section('body', 'min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-white to-sky-50')
+
 @section('content')
+    <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6">
+        <div class="mx-auto w-full max-w-md">
+            <div class="rounded-2xl border border-gray-200/80 bg-white/90 p-8 shadow-xl shadow-gray-900/5 ring-1 ring-gray-900/5 backdrop-blur-sm sm:p-10">
+                <div class="text-center">
+                    <a href="{{ route('products.index') }}" class="text-sm font-semibold text-emerald-700 hover:text-emerald-900">←
+                        Back to shop</a>
+                    <h1 class="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Sign in</h1>
+                    <p class="mt-2 text-sm text-gray-600">Use your email and password to access your account.</p>
+                </div>
 
-<div class="px-6 py-6 lg:px-8">
-  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in to your account</h2>
-  </div>
+                <form action="{{ route('login') }}" method="POST" class="mt-8 space-y-6">
+                    @csrf
+                    <div>
+                        <label for="email" class="label">Email</label>
+                        <div class="mt-2">
+                            <input id="email" type="email" name="email" required autocomplete="email"
+                                value="{{ old('email') }}" class="input" />
+                        </div>
+                        @error('email')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
 
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="/login" method="POST" class="space-y-6">
-        @csrf
-      <div>
-        <label for="email" class="label">Email address</label>
-        <div class="mt-2">
-          <input id="email" type="email" name="email" required autocomplete="email" value="{{ old('email') }}" class="input" />
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="label">Password</label>
+                            <span class="text-xs text-gray-400">Forgot? Contact support</span>
+                        </div>
+                        <div class="mt-2">
+                            <input id="password" type="password" name="password" required autocomplete="current-password"
+                                class="input" />
+                        </div>
+                        @error('password')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <button type="submit"
+                        class="flex w-full min-h-[48px] items-center justify-center rounded-xl bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
+                        Sign in
+                    </button>
+                </form>
+
+                <p class="mt-8 text-center text-sm text-gray-600">
+                    New here?
+                    <a href="{{ route('showSignup') }}" class="font-semibold text-emerald-700 hover:text-emerald-900">Create an account</a>
+                </p>
+            </div>
         </div>
-        @error('email')
-    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-@enderror
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between">
-          <label for="password" class="label">Password</label>
-          <div class="text-sm">
-            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot password?</a>
-          </div>
-        </div>
-        <div class="mt-2">
-          <input id="password" type="password" name="password" required autocomplete="current-password" class="input" />
-        </div>
-                @error('password')
-    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-@enderror
-      </div>
-
-      <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
-      </div>
-    </form>
-
-    <p class="mt-10 text-center text-sm/6 text-gray-500">
-      Not a member yet?
-      <a href="/signup" class="font-semibold text-indigo-600 hover:text-indigo-500">Sign up</a>
-    </p>
-  </div>
-</div>
-
+    </div>
 @endsection
-

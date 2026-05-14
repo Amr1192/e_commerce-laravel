@@ -2,30 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Cart;
-use App\Models\Product;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-
-    use HasFactory, Notifiable;
-
-    public function carts()
-    {
-        return $this->hasMany(Cart::class);
-    }
-
-    public function products()
-    {
-        return $this->belongsToMany(Product::class, 'carts')
-            ->withPivot('quantity');
-    }
-
-
+    use HasFactory;
+    use Notifiable;
 
     protected $fillable = [
         'name',
@@ -36,6 +22,7 @@ class User extends Authenticatable
 
     protected $hidden = [
         'password',
+        'remember_token',
     ];
 
     protected function casts(): array
@@ -44,5 +31,25 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function carts(): HasMany
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    /**
+     * Products currently in this user's persisted cart (pivot: quantity, timestamps).
+     */
+    public function cartProducts(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class, 'carts')
+            ->withPivot('quantity')
+            ->withTimestamps();
+    }
+
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
     }
 }

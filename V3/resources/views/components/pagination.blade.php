@@ -37,7 +37,7 @@
             <div class="hidden sm:flex sm:items-center sm:space-x-2">
                 @foreach ($paginator->getUrlRange(1, $paginator->lastPage()) as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <span class="relative z-10 inline-flex items-center bg-blue-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-md">
+                        <span class="relative z-10 inline-flex items-center bg-emerald-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 rounded-md">
                             {{ $page }}
                         </span>
                     @else
